@@ -1,0 +1,24 @@
+{
+  "name": "snowpack-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Bishal Pantha",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "concurrently": "^5.2.0",
+    "live-server": "^1.2.1",
+    "snowpack": "^1.7.1"
+  },
+  "dependencies": {
+    "react": "npm:@reactesm/react",
+    "react-dom": "npm:@reactesm/react-dom",
+    "styled-components": "^5.1.0"
+  },
+  "scripts": {
+    "start": "concurrently \"babel src --out-dir lib --watch\" \"live-server\"",
+    "prepare": "npx snowpack"
+  }
+}
